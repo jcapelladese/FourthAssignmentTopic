@@ -34,14 +34,16 @@ public abstract class ITVManager implements Manager {
 	    List<String> records = Files.readAllLines(Paths.get(itvFile));
 	    // System.out.println(records);
 
-	    List<ITV> itvs = new ArrayList<>();
+	    itvs = new ArrayList<>();
 
 	    for (String record : records) {
 	      String[] fields = record.split(",");
 	      long id = Long.parseLong(fields[0]);
 	      ITV itv = new ITV(id, fields[1], LocalDateTime.parse(fields[2], DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss")), fields[3]);
 	      itvs.add(itv);
+	      
 	    }
+//	    System.out.println(itvs.size());
 	  }
 
 }
