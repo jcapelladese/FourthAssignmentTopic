@@ -22,6 +22,7 @@ public class Main {
 		
 		
 		System.out.println(manager.from("barcelona"));
+		System.out.println();
 		//LocalDateTime now = LocalDateTime.now();
 		
 	}

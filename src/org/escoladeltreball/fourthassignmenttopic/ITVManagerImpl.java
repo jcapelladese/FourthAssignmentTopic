@@ -52,6 +52,7 @@ public class ITVManagerImpl extends ITVManager {
 	  public List<ITV> from(String where) throws Exception {
 		  List<ITV> itvFromWhere = new ArrayList<>(itvs);
 		  for (ITV itv : itvs) {
+			  System.out.println("hola");
 			  if (itv.getLloc() == where) {
 				  System.out.println("hola");
 				  itvFromWhere.add(itv);
